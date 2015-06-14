@@ -10,10 +10,6 @@
 #define 	Interrupt_pin1		3
 #define		led_out_pin			5
 
-
-
-
-///fghfghfgh
 CCDSensor Sensor(Sensing_pin, Interrupt_pin);
 SleepMode Sleep(check_sleep_pin);
 //fff
@@ -36,15 +32,25 @@ void setup() {
 void loop() {
 
 	int state = 0;
+	int sleep_state =0;
 	int i =0;
-//asdaaaaaaa
+
 	Sensor.print_Value();
 	state = Sensor.check_state_go_sleep();
 
 	Serial.println(state);
 	//Sensor._before_sleep_state == BRIGHT_STATE &&
-	if(state ==  BRIGHT_STATE )
+	if(Sensor._before_sleep_state == 0 && state>0)
 	{
+		if(state == DARK_STATE)
+			Sensor._before_sleep_state = BRIGHT_STATE;
+		else
+			Sensor._before_sleep_state = DARK_STATE;
+	}
+
+	if(state ==  BRIGHT_STATE && Sensor._before_sleep_state == DARK_STATE)
+	{
+		Sensor._before_sleep_state = BRIGHT_STATE;
 		for(i=0; i<5; i++)
 		{
 			digitalWrite(led_out_pin,HIGH);
@@ -53,9 +59,10 @@ void loop() {
 			delay(500);
 		}
 	}
-////
-	if(state ==  DARK_STATE )
+
+	if(state ==  DARK_STATE && Sensor._before_sleep_state == BRIGHT_STATE)
 	{
+		Sensor._before_sleep_state = DARK_STATE;
 		Serial.println("Get Darked Turn on LED");
 		digitalWrite(led_out_pin,HIGH);
 		delay(5000);
@@ -63,10 +70,21 @@ void loop() {
 	}
 
 	if(state > 0)
-		Sleep.sleepNow();
+	{
+		while(1){
+			sleep_state = Sensor.check_state_go_sleep();
+			if(sleep_state>0)
+				break;
+		}
+		if(sleep_state == state)
+			Sleep.sleepNow();
+		else
+			Sensor._before_sleep_state = 0;
+
+	}
 
 
 	//Serial.println("Normal Mode ");
-	delay(10);
+	delay(5);
 }
 

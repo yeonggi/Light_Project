@@ -57,22 +57,24 @@ void CCDSensor::print_Value()
 	Serial.print("   Dark State == " );
 	Serial.print(Dark_State);
 	Serial.println();
+
+	Serial.print("before state : ");
+	Serial.println(_before_sleep_state);
+
 }
 
 int CCDSensor::check_state_go_sleep()
 {
-	if(get_anal_light_val() > 100 && get_anal_light_val() < 400)
+	if(get_anal_light_val() > 100)
 	{
-		// ���⼭ Bright Digital value �� 1�� �Ǿ�� �Ѵ�.
 		Bright_State++;
-
-		if(Bright_State > 20)
+		if(Bright_State > 5)
 		{
 			Serial.println("Sleep mode Bright");
 
 			Bright_State = 0;
 			Dark_State = 0;
-			_before_sleep_state = BRIGHT_STATE;
+			//_before_sleep_state = BRIGHT_STATE;
 			return BRIGHT_STATE;
 			//Sleep.sleepNow();
 		}
@@ -81,17 +83,17 @@ int CCDSensor::check_state_go_sleep()
 	else if(get_anal_light_val() > 0 && get_anal_light_val() < 100)
 	{
 		Dark_State++;
-		if(Dark_State > 20)
+		if(Dark_State > 5)
 		{
-			Serial.println("Sleep mode Bright");
+			Serial.println("Sleep mode Dark");
 			Bright_State =0;
 			Dark_State = 0;
-			_before_sleep_state = DARK_STATE;
+			//_before_sleep_state = DARK_STATE;
 			return DARK_STATE;
 			//sleepNow();
 		}
 	}
-	delay(50);
+	delay(5);
 
 	return false;
 }
