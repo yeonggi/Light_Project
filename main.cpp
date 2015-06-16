@@ -31,21 +31,35 @@ SleepMode Sleep(check_sleep_pin);
 
 void setup() {
 
-	time_t init_time = 54;
 	Serial.begin(9600);  //Begin serial communcation
 	pinMode(led_out_pin,OUTPUT);
-	//second(init_time);
 
-       int i =0;
-	Serial.begin(9600);  //Begin serial communcation
-	pinMode(led_out_pin,OUTPUT);
-       Serial.println(" put date ");
+	int input =0;
+	int i=0;
+	int data_input=0;
 
-       while(1)
-       {
-            If ()
-   
-       }
+    Serial.println(" put date YY-MM-DD-TT-mm: ");
+    while(1)
+    {
+    	if(Serial.available())
+    	{
+    		//Serial.print(Serial.read());
+    		date_buffer[input] = Serial.read() - '0';
+    		input++;
+    		if(Serial.read() == '\r')
+    			Serial.print(date_buffer);
+    	}
+    	if(input == 10 )
+    	{
+    		for(i=0; i<5; i++)
+    		{
+    			data_input = (date_buffer[i] << 8) | date_buffer[i+1];
+    			Serial.println(data_input);
+    			//if(data_input >0 && data_input)
+    		}
+    	}
+
+    }
 
 	//attachInterrupt(0, wakeUpNow, LOW);
 }
@@ -59,8 +73,6 @@ void loop() {
 
 	Sensor.print_Value();
 	state = Sensor.check_state_go_sleep();
-	Serial.print(second());
-
 
 	Serial.println(state);
 	//Sensor._before_sleep_state == BRIGHT_STATE &&

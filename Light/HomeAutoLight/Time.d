@@ -1,4 +1,4 @@
-main.d: ../main.cpp \
+HomeAutoLight/Time.d: ../HomeAutoLight/Time.cpp \
  C:\Users\USER\Documents\Workspace\ArduinoCore\src/Arduino.h \
  C:\Users\USER\Documents\Workspace\ArduinoCore\src/binary.h \
  C:\Users\USER\Documents\Workspace\ArduinoCore\src/WCharacter.h \
@@ -10,8 +10,7 @@ main.d: ../main.cpp \
  C:\Users\USER\Documents\Workspace\ArduinoCore\src/USBAPI.h \
  C:\Users\USER\Documents\Workspace\ArduinoCore\src/Arduino.h \
  C:\Users\USER\Documents\Workspace\ArduinoCore\src/pins_arduino.h \
- C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight/HomeAutoLight.h \
- C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight/Time.h
+ ../HomeAutoLight/Time.h
 
 C:\Users\USER\Documents\Workspace\ArduinoCore\src/Arduino.h:
 
@@ -35,6 +34,4 @@ C:\Users\USER\Documents\Workspace\ArduinoCore\src/Arduino.h:
 
 C:\Users\USER\Documents\Workspace\ArduinoCore\src/pins_arduino.h:
 
-C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight/HomeAutoLight.h:
-
-C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight/Time.h:
+../HomeAutoLight/Time.h:

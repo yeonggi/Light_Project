@@ -32,7 +32,6 @@
 								<option id="de.innot.avreclipse.compiler.option.optimize.405319111" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" value="de.innot.avreclipse.compiler.optimize.size" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.compiler.option.incpath.1536834928" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Arduino\hardware\arduino\avr\libraries\Time&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Arduino\hardware\arduino\avr\libraries\RCSwitch&quot;"/>
 								</option>
@@ -48,7 +47,6 @@
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.987537878" name="Optimization Level" superClass="de.innot.avreclipse.cppcompiler.option.optimize" value="de.innot.avreclipse.cppcompiler.optimize.size" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.incpath.1193678993" name="Include Paths (-I)" superClass="de.innot.avreclipse.cppcompiler.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HomeAutoLight}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Arduino\hardware\arduino\avr\libraries\Time&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Arduino\hardware\arduino\avr\libraries\RCSwitch&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/src}&quot;"/>
 								</option>
@@ -65,7 +63,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HomeAutoLight}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/328P_16MHz}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Arduino\hardware\arduino\avr\libraries\RCSwitch&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Arduino\hardware\arduino\avr\libraries\Time&quot;"/>
 								</option>
 								<option id="de.innot.avreclipse.cpplinker.option.libs.1488859631" name="Libraries (-l)" superClass="de.innot.avreclipse.cpplinker.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="ArduinoCore"/>

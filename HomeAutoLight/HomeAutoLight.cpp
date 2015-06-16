@@ -6,6 +6,8 @@
 //////////
 extern "C" {
 	void wakeUpNow();
+
+
 }
 
 /***************************CCD Sensor Class**************************************/
@@ -129,3 +131,5 @@ void wakeUpNow()       // LED DisPlay
 	delay(1000);
 	digitalWrite(12, LOW);
 }
+
+

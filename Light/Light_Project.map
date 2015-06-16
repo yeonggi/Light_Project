@@ -1,7 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                              ./HomeAutoLight/HomeAutoLight.o (_ZN14HardwareSerial5beginEmh)
+                              ./main.o (_ZN14HardwareSerial9availableEv)
 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
                               ./HomeAutoLight/HomeAutoLight.o (Serial)
 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
@@ -13,23 +13,33 @@ C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(abi.o)
 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
                               c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o (main)
 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-                              ./HomeAutoLight/HomeAutoLight.o (delay)
+                              ./HomeAutoLight/Time.o (millis)
 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_analog.o)
                               ./HomeAutoLight/HomeAutoLight.o (analogRead)
 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
                               ./HomeAutoLight/HomeAutoLight.o (pinMode)
 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(hooks.o)
                               C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o) (yield)
+c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+                              ./HomeAutoLight/Time.o (__divmodhi4)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
-                              C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o) (__udivmodsi4)
+                              ./HomeAutoLight/Time.o (__udivmodsi4)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
                               c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o (exit)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
                               ./HomeAutoLight/HomeAutoLight.o (__do_copy_data)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_clear_bss.o)
-                              ./main.o (__do_clear_bss)
+                              ./HomeAutoLight/DateStrings.o (__do_clear_bss)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_ctors.o)
                               ./main.o (__do_global_ctors)
+c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+                              ./HomeAutoLight/Time.o (__umulhisi3)
+c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+                              ./HomeAutoLight/Time.o (__muluhisi3)
+c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+                              ./HomeAutoLight/Time.o (__mulshisi3)
+c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o) (__udivmodhi4)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
                               c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_ctors.o) (__tablejump__)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -74,18 +84,164 @@ c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\
                               C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o) (__unordsf2)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(abort.o)
                               C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(abi.o) (abort)
+c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
+                              ./HomeAutoLight/DateStrings.o (strcpy_P)
 
 Discarded input sections
 
  .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
+ .text          0x00000000        0x0 ./HomeAutoLight/DateStrings.o
+ .bss           0x00000000        0x0 ./HomeAutoLight/DateStrings.o
+ .stab          0x00000000      0x870 ./HomeAutoLight/DateStrings.o
+ .stabstr       0x00000000     0x12ec ./HomeAutoLight/DateStrings.o
+ .text._Z8monthStrh
+                0x00000000       0x1e ./HomeAutoLight/DateStrings.o
+ .text._Z13monthShortStrh
+                0x00000000       0x32 ./HomeAutoLight/DateStrings.o
+ .text._Z6dayStrh
+                0x00000000       0x1e ./HomeAutoLight/DateStrings.o
+ .text._Z11dayShortStrh
+                0x00000000       0x30 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL15dayShortNames_P
+                0x00000000       0x19 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL10dayNames_P
+                0x00000000       0x10 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL7dayStr7
+                0x00000000        0x9 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL7dayStr6
+                0x00000000        0x7 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL7dayStr5
+                0x00000000        0x9 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL7dayStr4
+                0x00000000        0xa ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL7dayStr3
+                0x00000000        0x8 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL7dayStr2
+                0x00000000        0x7 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL7dayStr1
+                0x00000000        0x7 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL7dayStr0
+                0x00000000        0x4 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL17monthShortNames_P
+                0x00000000       0x28 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL12monthNames_P
+                0x00000000       0x1a ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL10monthStr12
+                0x00000000        0x9 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL10monthStr11
+                0x00000000        0x9 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL10monthStr10
+                0x00000000        0x8 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr9
+                0x00000000        0xa ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr8
+                0x00000000        0x7 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr7
+                0x00000000        0x5 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr6
+                0x00000000        0x5 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr5
+                0x00000000        0x4 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr4
+                0x00000000        0x6 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr3
+                0x00000000        0x6 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr2
+                0x00000000        0x9 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr1
+                0x00000000        0x8 ./HomeAutoLight/DateStrings.o
+ .progmem.data._ZL9monthStr0
+                0x00000000        0x1 ./HomeAutoLight/DateStrings.o
+ .bss._ZL6buffer
+                0x00000000        0xa ./HomeAutoLight/DateStrings.o
  .text          0x00000000        0x0 ./HomeAutoLight/HomeAutoLight.o
  .bss           0x00000000        0x0 ./HomeAutoLight/HomeAutoLight.o
  .stab          0x00000000      0xac8 ./HomeAutoLight/HomeAutoLight.o
  .stabstr       0x00000000     0x1482 ./HomeAutoLight/HomeAutoLight.o
+ .text          0x00000000        0x0 ./HomeAutoLight/Time.o
+ .bss           0x00000000        0x0 ./HomeAutoLight/Time.o
+ .stab          0x00000000     0x135c ./HomeAutoLight/Time.o
+ .stabstr       0x00000000     0x182a ./HomeAutoLight/Time.o
+ .text._Z9breakTimemR12tmElements_t
+                0x00000000      0x1ae ./HomeAutoLight/Time.o
+ .text._Z12refreshCachem
+                0x00000000       0x4c ./HomeAutoLight/Time.o
+ .text._Z4hourm
+                0x00000000        0xc ./HomeAutoLight/Time.o
+ .text._Z4isPMm
+                0x00000000       0x16 ./HomeAutoLight/Time.o
+ .text._Z4isAMm
+                0x00000000        0xe ./HomeAutoLight/Time.o
+ .text._Z12hourFormat12m
+                0x00000000       0x1e ./HomeAutoLight/Time.o
+ .text._Z6minutem
+                0x00000000        0xc ./HomeAutoLight/Time.o
+ .text._Z6secondm
+                0x00000000        0xc ./HomeAutoLight/Time.o
+ .text._Z3daym  0x00000000        0xc ./HomeAutoLight/Time.o
+ .text._Z7weekdaym
+                0x00000000        0xc ./HomeAutoLight/Time.o
+ .text._Z5monthm
+                0x00000000        0xc ./HomeAutoLight/Time.o
+ .text._Z4yearm
+                0x00000000       0x10 ./HomeAutoLight/Time.o
+ .text._Z8makeTimeR12tmElements_t
+                0x00000000      0x176 ./HomeAutoLight/Time.o
+ .text._Z7setTimem
+                0x00000000       0x62 ./HomeAutoLight/Time.o
+ .text._Z3nowv  0x00000000      0x122 ./HomeAutoLight/Time.o
+ .text._Z4hourv
+                0x00000000       0x10 ./HomeAutoLight/Time.o
+ .text._Z12hourFormat12v
+                0x00000000        0x8 ./HomeAutoLight/Time.o
+ .text._Z4isAMv
+                0x00000000       0x12 ./HomeAutoLight/Time.o
+ .text._Z4isPMv
+                0x00000000        0x8 ./HomeAutoLight/Time.o
+ .text._Z6minutev
+                0x00000000       0x10 ./HomeAutoLight/Time.o
+ .text._Z6secondv
+                0x00000000       0x10 ./HomeAutoLight/Time.o
+ .text._Z3dayv  0x00000000       0x10 ./HomeAutoLight/Time.o
+ .text._Z7weekdayv
+                0x00000000       0x10 ./HomeAutoLight/Time.o
+ .text._Z5monthv
+                0x00000000       0x10 ./HomeAutoLight/Time.o
+ .text._Z4yearv
+                0x00000000        0x8 ./HomeAutoLight/Time.o
+ .text._Z7setTimeiiiiii
+                0x00000000       0x48 ./HomeAutoLight/Time.o
+ .text._Z10adjustTimel
+                0x00000000       0x32 ./HomeAutoLight/Time.o
+ .text._Z10timeStatusv
+                0x00000000        0xe ./HomeAutoLight/Time.o
+ .text._Z15setSyncProviderPFmvE
+                0x00000000       0x2c ./HomeAutoLight/Time.o
+ .text._Z15setSyncIntervalm
+                0x00000000       0x42 ./HomeAutoLight/Time.o
+ .rodata._ZL9monthDays
+                0x00000000        0xc ./HomeAutoLight/Time.o
+ .bss.getTimePtr
+                0x00000000        0x2 ./HomeAutoLight/Time.o
+ .bss._ZL6Status
+                0x00000000        0x2 ./HomeAutoLight/Time.o
+ .bss._ZL12nextSyncTime
+                0x00000000        0x4 ./HomeAutoLight/Time.o
+ .bss._ZL10prevMillis
+                0x00000000        0x4 ./HomeAutoLight/Time.o
+ .bss._ZL7sysTime
+                0x00000000        0x4 ./HomeAutoLight/Time.o
+ .data._ZL12syncInterval
+                0x00000000        0x4 ./HomeAutoLight/Time.o
+ .bss._ZL9cacheTime
+                0x00000000        0x4 ./HomeAutoLight/Time.o
+ .bss._ZL2tm    0x00000000        0x7 ./HomeAutoLight/Time.o
  .text          0x00000000        0x0 ./main.o
  .bss           0x00000000        0x0 ./main.o
- .stab          0x00000000      0xa08 ./main.o
- .stabstr       0x00000000     0x15e6 ./main.o
+ .stab          0x00000000      0xac8 ./main.o
+ .stabstr       0x00000000     0x167e ./main.o
+ .bss.input_recog_flag
+                0x00000000        0x1 ./main.o
  .group         0x00000000        0x8 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
  .text          0x00000000        0x0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
  .bss           0x00000000        0x0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
@@ -183,6 +339,21 @@ Discarded input sections
  .bss           0x00000000        0x0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(hooks.o)
  .stab          0x00000000      0x27c C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(hooks.o)
  .stabstr       0x00000000      0x723 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(hooks.o)
+ .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.div
+                0x00000000       0x28 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc   0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
  .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
  .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
  .text.libgcc.mul
@@ -256,6 +427,66 @@ Discarded input sections
                 0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_ctors.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_ctors.o)
+ .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.mul
+                0x00000000       0x1e c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.mul
+                0x00000000       0x16 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.mul
+                0x00000000       0x10 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc   0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x00000000       0x28 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
  .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
  .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
  .text.libgcc.mul
@@ -354,6 +585,10 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(abort.o)
  .text.avr-libc
                 0x00000000        0xa c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(abort.o)
+ .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
+ .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
+ .text.avr-libc
+                0x00000000        0xe c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
 
 Memory Configuration
 
@@ -370,7 +605,9 @@ Linker script and memory map
 
 Address of section .data set to 0x800100
 LOAD c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
+LOAD ./HomeAutoLight/DateStrings.o
 LOAD ./HomeAutoLight/HomeAutoLight.o
+LOAD ./HomeAutoLight/Time.o
 LOAD ./main.o
 LOAD C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a
 LOAD c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a
@@ -471,7 +708,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xf38
+.text           0x00000000      0xfa0
  *(.vectors)
  .vectors       0x00000000       0x68 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vector_default
@@ -599,130 +836,130 @@ END GROUP
  .text._ZN9SleepMode8sleepNowEv
                 0x000002d4       0x32 ./HomeAutoLight/HomeAutoLight.o
                 0x000002d4                _ZN9SleepMode8sleepNowEv
- .text.setup    0x00000306       0x16 ./main.o
-                0x00000306                setup
- .text.loop     0x0000031c      0x126 ./main.o
-                0x0000031c                loop
- .text.startup._GLOBAL__sub_I_Sensor
-                0x00000442       0x18 ./main.o
+ .text.loop     0x00000306      0x116 ./main.o
+                0x00000306                loop
+ .text.startup._GLOBAL__sub_I_date_buffer
+                0x0000041c       0x18 ./main.o
+ .text.setup    0x00000434       0x8e ./main.o
+                0x00000434                setup
  .text._ZN14HardwareSerial9availableEv
-                0x0000045a       0x16 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                0x0000045a                _ZN14HardwareSerial9availableEv
+                0x000004c2       0x16 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                0x000004c2                _ZN14HardwareSerial9availableEv
  .text._ZN14HardwareSerial4peekEv
-                0x00000470       0x1c C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                0x00000470                _ZN14HardwareSerial4peekEv
+                0x000004d8       0x1c C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                0x000004d8                _ZN14HardwareSerial4peekEv
  .text._ZN14HardwareSerial4readEv
-                0x0000048c       0x28 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                0x0000048c                _ZN14HardwareSerial4readEv
+                0x000004f4       0x28 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                0x000004f4                _ZN14HardwareSerial4readEv
  .text._Z14serialEventRunv
-                0x000004b4       0x1a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                0x000004b4                _Z14serialEventRunv
+                0x0000051c       0x1a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                0x0000051c                _Z14serialEventRunv
  .text._ZN14HardwareSerial17_tx_udr_empty_irqEv
-                0x000004ce       0x42 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                0x000004ce                _ZN14HardwareSerial17_tx_udr_empty_irqEv
+                0x00000536       0x42 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                0x00000536                _ZN14HardwareSerial17_tx_udr_empty_irqEv
  .text._ZN14HardwareSerial5flushEv
-                0x00000510       0x42 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                0x00000510                _ZN14HardwareSerial5flushEv
+                0x00000578       0x42 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                0x00000578                _ZN14HardwareSerial5flushEv
  .text._ZN14HardwareSerial5writeEh
-                0x00000552       0xc8 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                0x00000552                _ZN14HardwareSerial5writeEh
+                0x000005ba       0xc8 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                0x000005ba                _ZN14HardwareSerial5writeEh
  .text._ZN14HardwareSerial5beginEmh
-                0x0000061a       0xc0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                0x0000061a                _ZN14HardwareSerial5beginEmh
+                0x00000682       0xc0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                0x00000682                _ZN14HardwareSerial5beginEmh
  .text.__vector_18
-                0x000006da       0x64 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
-                0x000006da                __vector_18
+                0x00000742       0x64 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
+                0x00000742                __vector_18
  .text.__vector_19
-                0x0000073e       0x4a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
-                0x0000073e                __vector_19
+                0x000007a6       0x4a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
+                0x000007a6                __vector_19
  .text._Z17Serial0_availablev
-                0x00000788       0x12 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
-                0x00000788                _Z17Serial0_availablev
+                0x000007f0       0x12 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
+                0x000007f0                _Z17Serial0_availablev
  .text.startup._GLOBAL__sub_I___vector_18
-                0x0000079a       0x86 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
+                0x00000802       0x86 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
  .text._ZN5Print5writeEPKhj
-                0x00000820       0x50 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x00000820                _ZN5Print5writeEPKhj
+                0x00000888       0x50 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x00000888                _ZN5Print5writeEPKhj
  .text._ZN5Print5writeEPKc
-                0x00000870       0x2c C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x00000870                _ZN5Print5writeEPKc
+                0x000008d8       0x2c C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x000008d8                _ZN5Print5writeEPKc
  .text._ZN5Print5printEPKc
-                0x0000089c        0x2 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x0000089c                _ZN5Print5printEPKc
+                0x00000904        0x2 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x00000904                _ZN5Print5printEPKc
  .text._ZN5Print5printEc
-                0x0000089e        0xe C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x0000089e                _ZN5Print5printEc
+                0x00000906        0xe C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x00000906                _ZN5Print5printEc
  .text._ZN5Print7printlnEv
-                0x000008ac       0x24 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x000008ac                _ZN5Print7printlnEv
+                0x00000914       0x24 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x00000914                _ZN5Print7printlnEv
  .text._ZN5Print7printlnEPKc
-                0x000008d0       0x20 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x000008d0                _ZN5Print7printlnEPKc
+                0x00000938       0x20 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x00000938                _ZN5Print7printlnEPKc
  .text._ZN5Print11printNumberEmh
-                0x000008f0       0xae C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x000008f0                _ZN5Print11printNumberEmh
+                0x00000958       0xae C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x00000958                _ZN5Print11printNumberEmh
  .text._ZN5Print5printEli
-                0x0000099e       0x8e C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x0000099e                _ZN5Print5printEli
+                0x00000a06       0x8e C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x00000a06                _ZN5Print5printEli
  .text._ZN5Print5printEii
-                0x00000a2c        0xe C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x00000a2c                _ZN5Print5printEii
+                0x00000a94        0xe C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x00000a94                _ZN5Print5printEii
  .text._ZN5Print7printlnEii
-                0x00000a3a       0x2c C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                0x00000a3a                _ZN5Print7printlnEii
+                0x00000aa2       0x2c C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                0x00000aa2                _ZN5Print7printlnEii
  .text.attachInterrupt
-                0x00000a66       0x40 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
-                0x00000a66                attachInterrupt
+                0x00000ace       0x40 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
+                0x00000ace                attachInterrupt
  .text.detachInterrupt
-                0x00000aa6       0x20 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
-                0x00000aa6                detachInterrupt
+                0x00000b0e       0x20 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
+                0x00000b0e                detachInterrupt
  .text.__vector_1
-                0x00000ac6       0x5a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
-                0x00000ac6                __vector_1
+                0x00000b2e       0x5a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
+                0x00000b2e                __vector_1
  .text.__vector_2
-                0x00000b20       0x5a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
-                0x00000b20                __vector_2
+                0x00000b88       0x5a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
+                0x00000b88                __vector_2
  .text.initVariant
-                0x00000b7a        0x2 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
-                0x00000b7a                initVariant
+                0x00000be2        0x2 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
+                0x00000be2                initVariant
  .text.startup.main
-                0x00000b7c       0x14 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
-                0x00000b7c                main
+                0x00000be4       0x14 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
+                0x00000be4                main
  .text.__vector_16
-                0x00000b90       0x94 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-                0x00000b90                __vector_16
- .text.micros   0x00000c24       0x46 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-                0x00000c24                micros
- .text.delay    0x00000c6a       0x4a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-                0x00000c6a                delay
- .text.init     0x00000cb4       0x76 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-                0x00000cb4                init
+                0x00000bf8       0x94 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
+                0x00000bf8                __vector_16
+ .text.micros   0x00000c8c       0x46 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
+                0x00000c8c                micros
+ .text.delay    0x00000cd2       0x4a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
+                0x00000cd2                delay
+ .text.init     0x00000d1c       0x76 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
+                0x00000d1c                init
  .text.analogRead
-                0x00000d2a       0x3a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_analog.o)
-                0x00000d2a                analogRead
+                0x00000d92       0x3a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_analog.o)
+                0x00000d92                analogRead
  .text.turnOffPWM
-                0x00000d64       0x52 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
- .text.pinMode  0x00000db6       0x72 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
-                0x00000db6                pinMode
+                0x00000dcc       0x52 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
+ .text.pinMode  0x00000e1e       0x72 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
+                0x00000e1e                pinMode
  .text.digitalWrite
-                0x00000e28       0x6a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
-                0x00000e28                digitalWrite
+                0x00000e90       0x6a C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
+                0x00000e90                digitalWrite
  .text.digitalRead
-                0x00000e92       0x50 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
-                0x00000e92                digitalRead
- .text.__empty  0x00000ee2        0x2 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(hooks.o)
-                0x00000ee2                yield
+                0x00000efa       0x50 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
+                0x00000efa                digitalRead
+ .text.__empty  0x00000f4a        0x2 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(hooks.o)
+                0x00000f4a                yield
  .text.libgcc.div
-                0x00000ee4       0x44 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
-                0x00000ee4                __udivmodsi4
- .text.libgcc   0x00000f28        0xc c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
-                0x00000f28                __tablejump2__
-                0x00000f2c                __tablejump__
-                0x00000f34                . = ALIGN (0x2)
+                0x00000f4c       0x44 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
+                0x00000f4c                __udivmodsi4
+ .text.libgcc   0x00000f90        0xc c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
+                0x00000f90                __tablejump2__
+                0x00000f94                __tablejump__
+                0x00000f9c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000f34        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
-                0x00000f34                _exit
-                0x00000f34                exit
+ .fini9         0x00000f9c        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+                0x00000f9c                _exit
+                0x00000f9c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -741,15 +978,17 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000f34        0x4 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000f9c        0x4 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000f38                _etext = .
+                0x00000fa0                _etext = .
 
-.data           0x00800100       0xb6 load address 0x00000f38
+.data           0x00800100       0xd2 load address 0x00000fa0
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
+ .data          0x00800100        0x0 ./HomeAutoLight/DateStrings.o
  .data          0x00800100        0x0 ./HomeAutoLight/HomeAutoLight.o
+ .data          0x00800100        0x0 ./HomeAutoLight/Time.o
  .data          0x00800100        0x0 ./main.o
  .data          0x00800100        0x0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
  .data          0x00800100        0x0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
@@ -761,11 +1000,16 @@ END GROUP
  .data          0x00800100        0x0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_analog.o)
  .data          0x00800100        0x0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
  .data          0x00800100        0x0 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(hooks.o)
+ .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_clear_bss.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_ctors.o)
+ .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+ .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+ .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+ .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(addsf3x.o)
@@ -788,6 +1032,7 @@ END GROUP
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(unordsf2.o)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(abort.o)
+ .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
  *(.data*)
  .data.analog_reference
                 0x00800100        0x1 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_analog.o)
@@ -797,45 +1042,49 @@ END GROUP
  .rodata.str1.1
                 0x00800101       0x8e ./HomeAutoLight/HomeAutoLight.o
  .rodata.str1.1
-                0x0080018f       0x17 ./main.o
+                0x0080018f       0x32 ./main.o
  .rodata._ZTV14HardwareSerial
-                0x008001a6       0x10 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-                0x008001a6                _ZTV14HardwareSerial
+                0x008001c1       0x10 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                0x008001c1                _ZTV14HardwareSerial
  *(.gnu.linkonce.d*)
-                0x008001b6                . = ALIGN (0x2)
-                0x008001b6                _edata = .
-                0x008001b6                PROVIDE (__data_end, .)
+                0x008001d2                . = ALIGN (0x2)
+ *fill*         0x008001d1        0x1 
+                0x008001d2                _edata = .
+                0x008001d2                PROVIDE (__data_end, .)
 
-.bss            0x008001b6       0xbc
-                0x008001b6                PROVIDE (__bss_start, .)
+.bss            0x008001d2       0xc6
+                0x008001d2                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.Sleep     0x008001b6        0x4 ./main.o
-                0x008001b6                Sleep
- .bss.Sensor    0x008001ba        0xe ./main.o
-                0x008001ba                Sensor
- .bss.Serial    0x008001c8       0x9d C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
-                0x008001c8                Serial
- .bss.intFunc   0x00800265        0x4 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
+ .bss.Sleep     0x008001d2        0x4 ./main.o
+                0x008001d2                Sleep
+ .bss.Sensor    0x008001d6        0xe ./main.o
+                0x008001d6                Sensor
+ .bss.date_buffer
+                0x008001e4        0xa ./main.o
+                0x008001e4                date_buffer
+ .bss.Serial    0x008001ee       0x9d C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
+                0x008001ee                Serial
+ .bss.intFunc   0x0080028b        0x4 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
  .bss.timer0_fract
-                0x00800269        0x1 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
+                0x0080028f        0x1 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
  .bss.timer0_millis
-                0x0080026a        0x4 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-                0x0080026a                timer0_millis
+                0x00800290        0x4 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
+                0x00800290                timer0_millis
  .bss.timer0_overflow_count
-                0x0080026e        0x4 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-                0x0080026e                timer0_overflow_count
+                0x00800294        0x4 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
+                0x00800294                timer0_overflow_count
  *(COMMON)
-                0x00800272                PROVIDE (__bss_end, .)
-                0x00000f38                __data_load_start = LOADADDR (.data)
-                0x00000fee                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800298                PROVIDE (__bss_end, .)
+                0x00000fa0                __data_load_start = LOADADDR (.data)
+                0x00001072                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800272        0x0
-                0x00800272                PROVIDE (__noinit_start, .)
+.noinit         0x00800298        0x0
+                0x00800298                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800272                PROVIDE (__noinit_end, .)
-                0x00800272                _end = .
-                0x00800272                PROVIDE (__heap_start, .)
+                0x00800298                PROVIDE (__noinit_end, .)
+                0x00800298                _end = .
+                0x00800298                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -873,8 +1122,10 @@ END GROUP
 
 .comment        0x00000000       0x11
  *(.comment)
- .comment       0x00000000       0x11 ./HomeAutoLight/HomeAutoLight.o
+ .comment       0x00000000       0x11 ./HomeAutoLight/DateStrings.o
                                  0x12 (size before relaxing)
+ .comment       0x00000011       0x12 ./HomeAutoLight/HomeAutoLight.o
+ .comment       0x00000011       0x12 ./HomeAutoLight/Time.o
  .comment       0x00000011       0x12 ./main.o
  .comment       0x00000011       0x12 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
  .comment       0x00000011       0x12 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
@@ -960,18 +1211,52 @@ Serial                                            C:\Users\USER\Documents\Worksp
                                                   ./main.o
                                                   ./HomeAutoLight/HomeAutoLight.o
 Sleep                                             ./main.o
+_Z10adjustTimel                                   ./HomeAutoLight/Time.o
+_Z10timeStatusv                                   ./HomeAutoLight/Time.o
+_Z11dayShortStrh                                  ./HomeAutoLight/DateStrings.o
 _Z11serialEventv                                  C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+_Z12hourFormat12m                                 ./HomeAutoLight/Time.o
+_Z12hourFormat12v                                 ./HomeAutoLight/Time.o
+_Z12refreshCachem                                 ./HomeAutoLight/Time.o
+_Z13monthShortStrh                                ./HomeAutoLight/DateStrings.o
 _Z14serialEventRunv                               C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
+_Z15setSyncIntervalm                              ./HomeAutoLight/Time.o
+_Z15setSyncProviderPFmvE                          ./HomeAutoLight/Time.o
 _Z17Serial0_availablev                            C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
-_Z6secondv                                        ./main.o
+_Z3daym                                           ./HomeAutoLight/Time.o
+_Z3dayv                                           ./HomeAutoLight/Time.o
+_Z3nowv                                           ./HomeAutoLight/Time.o
+_Z4hourm                                          ./HomeAutoLight/Time.o
+_Z4hourv                                          ./HomeAutoLight/Time.o
+_Z4isAMm                                          ./HomeAutoLight/Time.o
+_Z4isAMv                                          ./HomeAutoLight/Time.o
+_Z4isPMm                                          ./HomeAutoLight/Time.o
+_Z4isPMv                                          ./HomeAutoLight/Time.o
+_Z4yearm                                          ./HomeAutoLight/Time.o
+_Z4yearv                                          ./HomeAutoLight/Time.o
+_Z5monthm                                         ./HomeAutoLight/Time.o
+_Z5monthv                                         ./HomeAutoLight/Time.o
+_Z6dayStrh                                        ./HomeAutoLight/DateStrings.o
+_Z6minutem                                        ./HomeAutoLight/Time.o
+_Z6minutev                                        ./HomeAutoLight/Time.o
+_Z6secondm                                        ./HomeAutoLight/Time.o
+_Z6secondv                                        ./HomeAutoLight/Time.o
+_Z7setTimeiiiiii                                  ./HomeAutoLight/Time.o
+_Z7setTimem                                       ./HomeAutoLight/Time.o
+_Z7weekdaym                                       ./HomeAutoLight/Time.o
+_Z7weekdayv                                       ./HomeAutoLight/Time.o
+_Z8makeTimeR12tmElements_t                        ./HomeAutoLight/Time.o
+_Z8monthStrh                                      ./HomeAutoLight/DateStrings.o
+_Z9breakTimemR12tmElements_t                      ./HomeAutoLight/Time.o
 _ZN14HardwareSerial17_tx_udr_empty_irqEv          C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
 _ZN14HardwareSerial17availableForWriteEv          C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
 _ZN14HardwareSerial3endEv                         C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
 _ZN14HardwareSerial4peekEv                        C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
 _ZN14HardwareSerial4readEv                        C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                                                  ./main.o
 _ZN14HardwareSerial5beginEmh                      C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
                                                   ./main.o
                                                   ./HomeAutoLight/HomeAutoLight.o
@@ -979,10 +1264,12 @@ _ZN14HardwareSerial5flushEv                       C:\Users\USER\Documents\Worksp
 _ZN14HardwareSerial5writeEh                       C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
 _ZN14HardwareSerial9availableEv                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
+                                                  ./main.o
 _ZN5Print10printFloatEdh                          C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 _ZN5Print11printNumberEmh                         C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 _ZN5Print5printEPK19__FlashStringHelper           C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 _ZN5Print5printEPKc                               C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+                                                  ./main.o
                                                   ./HomeAutoLight/HomeAutoLight.o
 _ZN5Print5printERK6String                         C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 _ZN5Print5printERK9Printable                      C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
@@ -990,7 +1277,6 @@ _ZN5Print5printEc                                 C:\Users\USER\Documents\Worksp
 _ZN5Print5printEdi                                C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 _ZN5Print5printEhi                                C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 _ZN5Print5printEii                                C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
-                                                  ./main.o
                                                   ./HomeAutoLight/HomeAutoLight.o
 _ZN5Print5printEji                                C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 _ZN5Print5printEli                                C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
@@ -1048,6 +1334,8 @@ __cxa_pure_virtual                                C:\Users\USER\Documents\Worksp
 __data_end                                        c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
 __data_load_start                                 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
 __data_start                                      c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
+__divmodhi4                                       c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
+                                                  ./HomeAutoLight/Time.o
 __divsf3                                          c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(divsf3.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 __divsf3_pse                                      c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(divsf3x.o)
@@ -1058,11 +1346,14 @@ __do_clear_bss                                    c:/arduino/hardware/tools/avr/
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
                                                   ./main.o
+                                                  ./HomeAutoLight/Time.o
+                                                  ./HomeAutoLight/DateStrings.o
 __do_copy_data                                    c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_analog.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
                                                   ./main.o
+                                                  ./HomeAutoLight/Time.o
                                                   ./HomeAutoLight/HomeAutoLight.o
 __do_global_ctors                                 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_ctors.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial0.o)
@@ -1123,11 +1414,17 @@ __lesf2                                           c:/arduino/hardware/tools/avr/
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 __ltsf2                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
+__mulohisi3                                       c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
 __mulsf3                                          c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(mulsf3.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 __mulsf3_pse                                      c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
 __mulsf3x                                         c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+__mulshisi3                                       c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+                                                  ./HomeAutoLight/Time.o
+__muluhisi3                                       c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+                                                  ./HomeAutoLight/Time.o
 __nesf2                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
 __stack                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
 __subsf3                                          c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -1135,9 +1432,15 @@ __subsf3                                          c:/arduino/hardware/tools/avr/
 __tablejump2__                                    c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
 __tablejump__                                     c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_ctors.o)
+__udivmodhi4                                      c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
 __udivmodsi4                                      c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(HardwareSerial.o)
+                                                  ./HomeAutoLight/Time.o
+__umulhisi3                                       c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+                                                  ./HomeAutoLight/Time.o
 __unordsf2                                        c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(unordsf2.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(Print.o)
 __vector_1                                        C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
@@ -1172,6 +1475,7 @@ __vector_8                                        c:/arduino/hardware/tools/avr/
 __vector_9                                        c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
 __vector_default                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
 __vectors                                         c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
+_div                                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_divmodhi4.o)
 _exit                                             c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(abort.o)
 abort                                             c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(abort.o)
@@ -1184,6 +1488,7 @@ analog_reference                                  C:\Users\USER\Documents\Worksp
 atexit                                            C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
 attachInterrupt                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(WInterrupts.o)
                                                   ./HomeAutoLight/HomeAutoLight.o
+date_buffer                                       ./main.o
 delay                                             C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
                                                   ./main.o
                                                   ./HomeAutoLight/HomeAutoLight.o
@@ -1202,26 +1507,10 @@ digital_pin_to_timer_PGM                          C:\Users\USER\Documents\Worksp
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_analog.o)
 exit                                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
+getTimePtr                                        ./HomeAutoLight/Time.o
 init                                              C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
                                                   C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
 initVariant                                       C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
+input_recog_flag                                  ./main.o
 loop                                              ./main.o
-                                                  C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
-main                                              C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
-micros                                            C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-millis                                            C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-pinMode                                           C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
-                                                  C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_analog.o)
-                                                  ./main.o
-                                                  ./HomeAutoLight/HomeAutoLight.o
-port_to_input_PGM                                 C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
-port_to_mode_PGM                                  C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
-port_to_output_PGM                                C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring_digital.o)
-setup                                             ./main.o
-                                                  C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(main.o)
-timer0_millis                                     C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-timer0_overflow_count                             C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
-wakeUpNow                                         ./HomeAutoLight/HomeAutoLight.o
-yield                                             C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(hooks.o)
-                                                  C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz\libArduinoCore.a(wiring.o)
+                                    
