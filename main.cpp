@@ -11,6 +11,11 @@
 #define 	Interrupt_pin1		3
 #define		led_out_pin			5
 
+enum date_string {YY, MM, DD, TT, mm};
+char date_buffer[10];
+char input_recog_flag;
+
+
 CCDSensor Sensor(Sensing_pin, Interrupt_pin);
 SleepMode Sleep(check_sleep_pin);
 
@@ -25,10 +30,23 @@ SleepMode Sleep(check_sleep_pin);
 
 
 void setup() {
+
 	time_t init_time = 54;
 	Serial.begin(9600);  //Begin serial communcation
 	pinMode(led_out_pin,OUTPUT);
 	//second(init_time);
+
+       int i =0;
+	Serial.begin(9600);  //Begin serial communcation
+	pinMode(led_out_pin,OUTPUT);
+       Serial.println(" put date ");
+
+       while(1)
+       {
+            If ()
+   
+       }
+
 	//attachInterrupt(0, wakeUpNow, LOW);
 }
 
