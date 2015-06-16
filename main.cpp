@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <HomeAutoLight.h>
 #include <avr/sleep.h>
+#include <Time.h>
 
 #define Power_saving mode;
 
@@ -25,6 +26,10 @@ SleepMode Sleep(check_sleep_pin);
 void setup() {
 	Serial.begin(9600);  //Begin serial communcation
 	pinMode(led_out_pin,OUTPUT);
+       while(1)
+       {
+            
+       }
 	//attachInterrupt(0, wakeUpNow, LOW);
 }
 
