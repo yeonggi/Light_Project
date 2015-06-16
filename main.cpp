@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <HomeAutoLight.h>
 #include <avr/sleep.h>
+#include <Time.h>
 
 #define Power_saving mode;
 
@@ -12,6 +13,7 @@
 
 CCDSensor Sensor(Sensing_pin, Interrupt_pin);
 SleepMode Sleep(check_sleep_pin);
+
 //fff
 // auto light app
 /*photo transistor */
@@ -23,8 +25,10 @@ SleepMode Sleep(check_sleep_pin);
 
 
 void setup() {
+	time_t init_time = 54;
 	Serial.begin(9600);  //Begin serial communcation
 	pinMode(led_out_pin,OUTPUT);
+	//second(init_time);
 	//attachInterrupt(0, wakeUpNow, LOW);
 }
 
@@ -37,6 +41,8 @@ void loop() {
 
 	Sensor.print_Value();
 	state = Sensor.check_state_go_sleep();
+	Serial.print(second());
+
 
 	Serial.println(state);
 	//Sensor._before_sleep_state == BRIGHT_STATE &&

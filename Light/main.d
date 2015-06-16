@@ -10,7 +10,8 @@ main.d: ../main.cpp \
  C:\Users\USER\Documents\Workspace\ArduinoCore\src/USBAPI.h \
  C:\Users\USER\Documents\Workspace\ArduinoCore\src/Arduino.h \
  C:\Users\USER\Documents\Workspace\ArduinoCore\src/pins_arduino.h \
- C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight/HomeAutoLight.h
+ C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight/HomeAutoLight.h \
+ C:\Arduino\hardware\arduino\avr\libraries\Time/Time.h
 
 C:\Users\USER\Documents\Workspace\ArduinoCore\src/Arduino.h:
 
@@ -35,3 +36,5 @@ C:\Users\USER\Documents\Workspace\ArduinoCore\src/Arduino.h:
 C:\Users\USER\Documents\Workspace\ArduinoCore\src/pins_arduino.h:
 
 C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight/HomeAutoLight.h:
+
+C:\Arduino\hardware\arduino\avr\libraries\Time/Time.h:

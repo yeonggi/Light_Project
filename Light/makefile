@@ -60,7 +60,7 @@ all: Light_Project.elf secondary-outputs
 Light_Project.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-g++ -s -Os  -o"Light_Project.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lm -Wl,-Map,Light_Project.map,--cref -mrelax -Wl,--gc-sections -L"C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight" -L"C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz" -L"C:\Arduino\hardware\arduino\avr\libraries\RCSwitch" -mmcu=atmega328p
+	avr-g++ -s -Os  -o"Light_Project.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lm -Wl,-Map,Light_Project.map,--cref -mrelax -Wl,--gc-sections -L"C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight" -L"C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz" -L"C:\Arduino\hardware\arduino\avr\libraries\RCSwitch" -L"C:\Arduino\hardware\arduino\avr\libraries\Time" -mmcu=atmega328p
 	@echo 'Finished building target: $@'
 	@echo ' '
 
