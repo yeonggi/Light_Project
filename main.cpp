@@ -14,7 +14,7 @@
 enum date_string {YY, MM, DD, TT, mm};
 char date_buffer[10];
 char input_recog_flag;
-
+char max_value[] = {99, 12, 32, 24, 60};
 
 CCDSensor Sensor(Sensing_pin, Interrupt_pin);
 SleepMode Sleep(check_sleep_pin);
@@ -37,29 +37,37 @@ void setup() {
 	int input =0;
 	int i=0;
 	int data_input=0;
-
-    Serial.println(" put date YY-MM-DD-TT-mm: ");
-    while(1)
-    {
-    	if(Serial.available())
+  	restart :
+  	memset(date_buffer,0,sizeof(date_buffer));
+  	Serial.println(" put date YY-MM-DD-TT-mm: ");
+	 while(1)
     	{
-    		//Serial.print(Serial.read());
-    		date_buffer[input] = Serial.read() - '0';
-    		input++;
-    		if(Serial.read() == '\r')
-    			Serial.print(date_buffer);
+      		if(Serial.available())
+      		{
+        		//Serial.print(Serial.read());
+        		date_buffer[input] = Serial.read() - '0';
+		        input++;
+		        //\r == 13 \n == 10
+		        if(Serial.read() == 13 || Serial.read() == 10 || input == 10)
+		        {
+				for(i=0; i<5; i++)
+			        {
+			        	data_input = (date_buffer[i]*10) + date_buffer[i+1];
+			        	if(data_input>0 && data_input < max_value[i])
+				        {
+					        Serial.print("---");
+					        Serial.print(data_input);
+				        }
+				        else
+				        {
+					        Serial.println("error retype date please");
+					        goto restart;
+				        }
+			        }
+         
+        		}
+       		}
     	}
-    	if(input == 10 )
-    	{
-    		for(i=0; i<5; i++)
-    		{
-    			data_input = (date_buffer[i] << 8) | date_buffer[i+1];
-    			Serial.println(data_input);
-    			//if(data_input >0 && data_input)
-    		}
-    	}
-
-    }
 
 	//attachInterrupt(0, wakeUpNow, LOW);
 }
