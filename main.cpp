@@ -12,7 +12,7 @@
 #define		led_out_pin			5
 
 enum date_string {YY, MM, DD, TT, mm};
-char date_buffer[10];
+int date_buffer[11];
 char input_recog_flag;
 char max_value[] = {99, 12, 32, 24, 60};
 
@@ -34,40 +34,57 @@ void setup() {
 	Serial.begin(9600);  //Begin serial communcation
 	pinMode(led_out_pin,OUTPUT);
 
-	int input =0;
+	int input;
 	int i=0;
 	int data_input=0;
+	int ch=0;
   	restart :
+
+	input = 0;
   	memset(date_buffer,0,sizeof(date_buffer));
-  	Serial.println(" put date YY-MM-DD-TT-mm: ");
-	 while(1)
-    	{
-      		if(Serial.available())
-      		{
-        		//Serial.print(Serial.read());
-        		date_buffer[input] = Serial.read() - '0';
-		        input++;
-		        //\r == 13 \n == 10
-		        if(Serial.read() == 13 || Serial.read() == 10 || input == 10)
-		        {
-				for(i=0; i<5; i++)
-			        {
-			        	data_input = (date_buffer[i]*10) + date_buffer[i+1];
-			        	if(data_input>0 && data_input < max_value[i])
-				        {
-					        Serial.print("---");
-					        Serial.print(data_input);
-				        }
-				        else
-				        {
-					        Serial.println("error retype date please");
-					        goto restart;
-				        }
-			        }
-         
-        		}
-       		}
-    	}
+  	Serial.println(" put date YY-MM-DD-TT-mm (No line ending mdoe): ");
+
+  	while(1)
+  	{
+  		if(Serial.available())
+  		{
+  			// ascii 48 -> 0
+  			date_buffer[input] = Serial.read() - (int)48;
+  			ch = Serial.read();
+  			Serial.print(date_buffer[input]);
+  			if(input%2 == 0 && input > 0)
+  				Serial.print("-");
+
+  			input++;
+  			//\r == 13 \n == 10
+  			//only behind code work
+  			if(date_buffer[input-1] == -35 || date_buffer[input-1] == -38 || input == 10)
+  			{
+  				Serial.println();
+  				for(i=0; i<10; i=i+2)
+  				{
+  					data_input = (date_buffer[i]*10) + date_buffer[i+1];
+  					if(data_input > 0 && data_input <= max_value[(int)(i/2)])
+  					{
+  						Serial.print("---");
+  						Serial.print(data_input);
+  					}
+  					else
+  					{
+  						Serial.println("error retype date please");
+  						goto restart;
+  					}
+  				}
+  				if(i == 10)
+  				{
+  					Serial.println();
+  					Serial.println("Time set done - go to program");
+  					break;
+  				}
+
+  			}
+  		}
+  	}
 
 	//attachInterrupt(0, wakeUpNow, LOW);
 }
