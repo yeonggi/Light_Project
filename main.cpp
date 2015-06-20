@@ -3,22 +3,11 @@
 #include <avr/sleep.h>
 #include <Time.h>
 
-#define Power_saving mode;
-
-#define 	Sensing_pin  		0
-#define 	check_sleep_pin 	12
-#define 	Interrupt_pin		2
-#define 	Interrupt_pin1		3
-#define		led_out_pin			5
-
-enum date_string {YY, MM, DD, TT, mm};
-int date_buffer[11];
-char input_recog_flag;
-char max_value[] = {99, 12, 32, 24, 60};
-
 CCDSensor Sensor(Sensing_pin, Interrupt_pin);
 SleepMode Sleep(check_sleep_pin);
+LedOut Led;
 
+int time[5];
 //fff
 // auto light app
 /*photo transistor */
@@ -28,64 +17,20 @@ SleepMode Sleep(check_sleep_pin);
 // have an
 //analog signal level close to VCC/2.
 
+/*pin config
+ * A1, D0 ---- CCD beteen Register
+ *
+ *
+ *
+ *
+ *
+ */
 
 void setup() {
-
+	memset(time,0,sizeof(time));
 	Serial.begin(9600);  //Begin serial communcation
-	pinMode(led_out_pin,OUTPUT);
-
-	int input;
-	int i=0;
-	int data_input=0;
-	int ch=0;
-  	restart :
-
-	input = 0;
-  	memset(date_buffer,0,sizeof(date_buffer));
-  	Serial.println(" put date YY-MM-DD-TT-mm (No line ending mdoe): ");
-
-  	while(1)
-  	{
-  		if(Serial.available())
-  		{
-  			// ascii 48 -> 0
-  			date_buffer[input] = Serial.read() - (int)48;
-  			ch = Serial.read();
-  			Serial.print(date_buffer[input]);
-  			if(input%2 == 0 && input > 0)
-  				Serial.print("-");
-
-  			input++;
-  			//\r == 13 \n == 10
-  			//only behind code work
-  			if(date_buffer[input-1] == -35 || date_buffer[input-1] == -38 || input == 10)
-  			{
-  				Serial.println();
-  				for(i=0; i<10; i=i+2)
-  				{
-  					data_input = (date_buffer[i]*10) + date_buffer[i+1];
-  					if(data_input > 0 && data_input <= max_value[(int)(i/2)])
-  					{
-  						Serial.print("---");
-  						Serial.print(data_input);
-  					}
-  					else
-  					{
-  						Serial.println("error retype date please");
-  						goto restart;
-  					}
-  				}
-  				if(i == 10)
-  				{
-  					Serial.println();
-  					Serial.println("Time set done - go to program");
-  					break;
-  				}
-
-  			}
-  		}
-  	}
-
+	//Get_Time_Data(time);
+	//setTime(time[3],time[4],0,time[2],time[1],time[0]);
 	//attachInterrupt(0, wakeUpNow, LOW);
 }
 
@@ -94,15 +39,24 @@ void loop() {
 
 	int state = 0;
 	int sleep_state =0;
-	int i =0;
 
+#if(print_only_CCDSensor_value == 1)
+	while(1)
+	{
+		Serial.println(Sensor.get_anal_light_val());
+		Serial.println(Sensor.get_digit_light_val());
+	}
+#endif
+
+#if(Print_Data  ==  1)
 	Sensor.print_Value();
+#endif
+
 	state = Sensor.check_state_go_sleep();
 
-	Serial.println(state);
-	//Sensor._before_sleep_state == BRIGHT_STATE &&
-	if(Sensor._before_sleep_state == 0 && state>0)
+	if(Sensor._before_sleep_state == 0 && state > 0)
 	{
+		//Serial.println(" =============== Before state is 0 =============== ");
 		if(state == DARK_STATE)
 			Sensor._before_sleep_state = BRIGHT_STATE;
 		else
@@ -112,24 +66,17 @@ void loop() {
 	if(state ==  BRIGHT_STATE && Sensor._before_sleep_state == DARK_STATE)
 	{
 		Sensor._before_sleep_state = BRIGHT_STATE;
-		for(i=0; i<5; i++)
-		{
-			digitalWrite(led_out_pin,HIGH);
-			delay(500);
-			digitalWrite(led_out_pin,LOW);
-			delay(500);
-		}
+		Led.flash(500,5);
 	}
 
 	if(state ==  DARK_STATE && Sensor._before_sleep_state == BRIGHT_STATE)
 	{
 		Sensor._before_sleep_state = DARK_STATE;
-		Serial.println("Get Darked Turn on LED");
-		digitalWrite(led_out_pin,HIGH);
-		delay(5000);
-		digitalWrite(led_out_pin,LOW);
+		//Serial.println("Get Darked Turn on LED");
+		Led.flash(3000,2);
 	}
 
+#if 1
 	if(state > 0)
 	{
 		while(1){
@@ -143,6 +90,10 @@ void loop() {
 			Sensor._before_sleep_state = 0;
 
 	}
+#else
+	if(state>0)
+		Sleep.sleepNow();
+#endif
 
 
 	//Serial.println("Normal Mode ");

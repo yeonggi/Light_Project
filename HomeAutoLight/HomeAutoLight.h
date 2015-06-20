@@ -3,8 +3,32 @@
 
 #include "Arduino.h"
 
+/** mode definition**/
+#define Power_saving mode;
+#define Print_only_CCDSensor_Value 		0
+#define Print_Data 						0
+
+/** Pin Definition **/
+#define 	Sensing_pin  			0
+#define 	check_sleep_pin 		12
+#define 	Interrupt_pin			2
+#define 	Interrupt_pin1			3
+#define		led_out_pin1			4
+#define		led_out_pin2			5
+#define		led_out_pin3			6
+#define		led_out_pin4			7
+
+
+/**State Definition**/
 #define 	DARK_STATE 		1
 #define 	BRIGHT_STATE 	2
+
+extern "C" {
+	void wakeUpNow();
+	int Get_Time_Data(int* time_data);
+
+
+}
 
 class CCDSensor //: public SleepMode
 {
@@ -41,8 +65,9 @@ class SleepMode
 class LedOut
 {
 	public:
-		LedOut(int led_pin);
-		void flash();
+		LedOut();
+		void flash(int delay_ms, int flash_time);
+
 
 };
 
