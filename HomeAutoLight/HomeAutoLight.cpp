@@ -5,104 +5,10 @@
 
 //////////
 
-
-/***************************CCD Sensor Class**************************************/
-CCDSensor::CCDSensor(int sensing_pin, int interrupt_pin)
-{
-	Serial.begin(9600);
-	pinMode(sensing_pin, INPUT);
-	pinMode(interrupt_pin, INPUT);
-	_sensing_pin = sensing_pin;
-	_interrupt_pin = interrupt_pin;
-
-	Bright_State =0;
-	Dark_State = 0;
-	_light_val = 0;
-	_digit_val = 0;
-	_before_sleep_state = 0;
-
-}
-
-int CCDSensor::get_anal_light_val()
-{
-	_light_val = analogRead(_sensing_pin) / 2;
-	if(_light_val>400)
-	{
-		//Serial.println("Strong Light Detected  --");
-	}
-	return _light_val;
-	//analogWrite(ledPin, analogRead(lightPin)/2);  //send the value to the ledPin. Depending on value of resistor
-}
-
-int CCDSensor::get_digit_light_val()
-{
-	_digit_val = digitalRead(_interrupt_pin);
-	return _digit_val;
-	//analogWrite(ledPin, analogRead(lightPin)/2);  //send the value to the ledPin. Depending on value of resistor
-}
-
-void CCDSensor::print_Value()
-{
-	Serial.println("====================start====================");
-	Serial.print("CCD Sensing Value (30Kohm) = ");
-	Serial.println(get_anal_light_val());
-
-	Serial.print("Bright Digital value = ");
-	Serial.println(get_digit_light_val());
-
-	Serial.print("Bright state = ");
-	Serial.print(Bright_State);
-	Serial.print(", Dark State == " );
-	Serial.print(Dark_State);
-	Serial.println();
-
-	Serial.print("before state : ");
-	Serial.println(_before_sleep_state);
-	Serial.println("======================end======================");
-
-}
-
-int CCDSensor::check_state_go_sleep()
-{
-	if(get_anal_light_val() > 100 && get_anal_light_val() < 400)
-	{
-		Bright_State++;
-		if(Bright_State > 5)
-		{
-			Serial.println("Sleep mode Bright");
-
-			Bright_State = 0;
-			Dark_State = 0;
-			//_before_sleep_state = BRIGHT_STATE;
-			return BRIGHT_STATE;
-			//Sleep.sleepNow();
-		}
-	}
-
-	else if(get_anal_light_val() > 0 && get_anal_light_val() < 100)
-	{
-		Dark_State++;
-		if(Dark_State > 5)
-		{
-			Serial.println("Sleep mode Dark");
-			Bright_State =0;
-			Dark_State = 0;
-			//_before_sleep_state = DARK_STATE;
-			return DARK_STATE;
-			//sleepNow();
-		}
-	}
-	delay(5);
-
-	return false;
-}
-
-
-
 /***************************Sleep Mode Class**************************************/
-SleepMode::SleepMode(int led_pin)
+SleepMode::SleepMode()
 {
-	_led_pin = led_pin;
+	_led_pin = check_sleep_pin;
 	_sleep_status = LOW;
 }
 
@@ -147,6 +53,152 @@ void LedOut::flash(int delay_ms, int flash_time)
 	}
 
 }
+
+/***************************CCD Sensor Class**************************************/
+CCDSensor::CCDSensor(int sensing_pin, int interrupt_pin)
+{
+	Serial.begin(9600);
+	pinMode(sensing_pin, INPUT);
+	pinMode(interrupt_pin, INPUT);
+	_sensing_pin = sensing_pin;
+	_interrupt_pin = interrupt_pin;
+
+	Bright_State =0;
+	Dark_State = 0;
+	_light_val = 0;
+	_digit_val = 0;
+	_before_sleep_state = 0;
+
+
+
+	//LedObj();
+
+}
+
+int CCDSensor::get_anal_light_val()
+{
+	_light_val = analogRead(_sensing_pin) / 2;
+	if(_light_val>400)
+	{
+		//Serial.println("Strong Light Detected  --");
+	}
+	return _light_val;
+	//analogWrite(ledPin, analogRead(lightPin)/2);  //send the value to the ledPin. Depending on value of resistor
+}
+
+int CCDSensor::get_digit_light_val()
+{
+	_digit_val = digitalRead(_interrupt_pin);
+	return _digit_val;
+	//analogWrite(ledPin, analogRead(lightPin)/2);  //send the value to the ledPin. Depending on value of resistor
+}
+
+void CCDSensor::print_Value()
+{
+	Serial.println("====================start====================");
+	Serial.print("CCD Sensing Value (30Kohm) = ");
+	Serial.println(get_anal_light_val());
+
+	Serial.print("Bright Digital value = ");
+	Serial.println(get_digit_light_val());
+
+	Serial.print("Bright state = ");
+	Serial.print(Bright_State);
+	Serial.print(", Dark State == " );
+	Serial.print(Dark_State);
+	Serial.println();
+
+	Serial.print("before state : ");
+	Serial.println(_before_sleep_state);
+	Serial.println("======================end======================");
+
+}
+
+int CCDSensor::check_state_go_sleep()
+{
+	if(get_anal_light_val() > 250 && get_anal_light_val() < 500)
+	{
+		Bright_State++;
+		if(Bright_State > 5)
+		{
+			Serial.println("Sleep mode Bright");
+
+			Bright_State = 0;
+			Dark_State = 0;
+			//_before_sleep_state = BRIGHT_STATE;
+			return BRIGHT_STATE;
+			//Sleep.sleepNow();
+		}
+	}
+
+	else if(get_anal_light_val() >= 0 && get_anal_light_val() <= 250)
+	{
+		Dark_State++;
+		if(Dark_State > 5)
+		{
+			Serial.println("Sleep mode Dark");
+			Bright_State =0;
+			Dark_State = 0;
+			//_before_sleep_state = DARK_STATE;
+			return DARK_STATE;
+			//sleepNow();
+		}
+	}
+	delay(5);
+
+	return false;
+}
+
+void CCDSensor::AutoLight_Power_Saving_Main()
+{
+	int state = 0;
+	int sleep_state =0;
+
+	state = check_state_go_sleep();
+
+	if(_before_sleep_state == 0 && state > 0)
+	{
+		//Serial.println(" =============== Before state is 0 =============== ");
+		if(state == DARK_STATE)
+			_before_sleep_state = BRIGHT_STATE;
+		else
+			_before_sleep_state = DARK_STATE;
+	}
+
+	if(state ==  BRIGHT_STATE && _before_sleep_state == DARK_STATE)
+	{
+		_before_sleep_state = BRIGHT_STATE;
+		LedObj.flash(500,5);
+	}
+
+	if(state ==  DARK_STATE && _before_sleep_state == BRIGHT_STATE)
+	{
+		_before_sleep_state = DARK_STATE;
+		//Serial.println("Get Darked Turn on LED");
+		LedObj.flash(3000,2);
+	}
+
+
+	if(state > 0)
+	{
+		while(1){
+			sleep_state = check_state_go_sleep();
+			if(sleep_state>0)
+				break;
+		}
+		if(sleep_state == state)
+			sleepObj.sleepNow();
+		else
+			_before_sleep_state = 0;
+
+	}
+	delay(5);
+}
+
+
+
+
+
 /***************************C Function**************************************/
 void wakeUpNow()       // LED DisPlay
 {

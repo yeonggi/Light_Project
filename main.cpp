@@ -4,10 +4,9 @@
 #include <Time.h>
 
 CCDSensor Sensor(Sensing_pin, Interrupt_pin);
-SleepMode Sleep(check_sleep_pin);
-LedOut Led;
 
-int time[5];
+
+//int time[5];
 //fff
 // auto light app
 /*photo transistor */
@@ -25,22 +24,22 @@ int time[5];
  *
  *
  */
+//가변저항 으로 할 걸
+
+/**mode **/
+#define Print_only_CCDSensor_Value 		0
+#define Print_Data 						0
+
 
 void setup() {
-	memset(time,0,sizeof(time));
 	Serial.begin(9600);  //Begin serial communcation
-	//Get_Time_Data(time);
-	//setTime(time[3],time[4],0,time[2],time[1],time[0]);
-	//attachInterrupt(0, wakeUpNow, LOW);
 }
 
 ///
 void loop() {
 
-	int state = 0;
-	int sleep_state =0;
 
-#if(print_only_CCDSensor_value == 1)
+#if Print_only_CCDSensor_Value
 	while(1)
 	{
 		Serial.println(Sensor.get_anal_light_val());
@@ -52,51 +51,10 @@ void loop() {
 	Sensor.print_Value();
 #endif
 
-	state = Sensor.check_state_go_sleep();
 
-	if(Sensor._before_sleep_state == 0 && state > 0)
-	{
-		//Serial.println(" =============== Before state is 0 =============== ");
-		if(state == DARK_STATE)
-			Sensor._before_sleep_state = BRIGHT_STATE;
-		else
-			Sensor._before_sleep_state = DARK_STATE;
-	}
-
-	if(state ==  BRIGHT_STATE && Sensor._before_sleep_state == DARK_STATE)
-	{
-		Sensor._before_sleep_state = BRIGHT_STATE;
-		Led.flash(500,5);
-	}
-
-	if(state ==  DARK_STATE && Sensor._before_sleep_state == BRIGHT_STATE)
-	{
-		Sensor._before_sleep_state = DARK_STATE;
-		//Serial.println("Get Darked Turn on LED");
-		Led.flash(3000,2);
-	}
-
-#if 1
-	if(state > 0)
-	{
-		while(1){
-			sleep_state = Sensor.check_state_go_sleep();
-			if(sleep_state>0)
-				break;
-		}
-		if(sleep_state == state)
-			Sleep.sleepNow();
-		else
-			Sensor._before_sleep_state = 0;
-
-	}
-#else
-	if(state>0)
-		Sleep.sleepNow();
-#endif
-
+	Sensor.AutoLight_Power_Saving_Main();
 
 	//Serial.println("Normal Mode ");
-	delay(5);
+
 }
 

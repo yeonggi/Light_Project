@@ -3,10 +3,8 @@
 
 #include "Arduino.h"
 
-/** mode definition**/
-#define Power_saving mode;
-#define Print_only_CCDSensor_Value 		0
-#define Print_Data 						0
+// about operation
+#define power_saving_mode
 
 /** Pin Definition **/
 #define 	Sensing_pin  			0
@@ -30,33 +28,12 @@ extern "C" {
 
 }
 
-class CCDSensor //: public SleepMode
-{
-	public:
-		CCDSensor(int sensing_pin, int interrupt_pin);
-		int get_anal_light_val();
-		int get_digit_light_val();
-		void print_Value();
-		int check_state_go_sleep();
-
-		int _light_val;
-		int _digit_val;
-		int _before_sleep_state;
-
-		int Bright_State;
-		int Dark_State;
-
-	private:
-		int _interrupt_pin;
-		int _sensing_pin;
-};
-
 class SleepMode
 {
 	public:
-		SleepMode(int led_pin);
+		SleepMode();
 		void sleepNow();
-		int _sleep_status = 0;
+		int _sleep_status;
 	private:
 		int _led_pin; //for check sleep mode
 
@@ -70,6 +47,35 @@ class LedOut
 
 
 };
+
+class CCDSensor
+{
+	//embedded object
+	SleepMode sleepObj;
+	LedOut	  LedObj;
+
+	public:
+		CCDSensor(int sensing_pin, int interrupt_pin);
+		int get_anal_light_val();
+		int get_digit_light_val();
+		void print_Value();
+		int check_state_go_sleep();
+		void AutoLight_Power_Saving_Main();
+		void AutoLight_Nomal_Main();
+
+
+		int _light_val;
+		int _digit_val;
+		int _before_sleep_state;
+
+		int Bright_State;
+		int Dark_State;
+
+	private:
+		int _interrupt_pin;
+		int _sensing_pin;
+};
+
 
 
 #endif
