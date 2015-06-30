@@ -8,7 +8,10 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include HomeAutoLight/subdir.mk
+-include lib_src/Time/subdir.mk
+-include lib_src/SoftwareSerial/subdir.mk
+-include lib_src/RCSwitch/subdir.mk
+-include lib_src/HomeAutoLight/subdir.mk
 -include Debug/subdir.mk
 -include subdir.mk
 -include objects.mk
@@ -60,7 +63,7 @@ all: Light_Project.elf secondary-outputs
 Light_Project.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-g++ -s -Os  -o"Light_Project.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lm -Wl,-Map,Light_Project.map,--cref -mrelax -Wl,--gc-sections -L"C:\Users\USER\Documents\Workspace\Light_Project\HomeAutoLight" -L"C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz" -L"C:\Arduino\hardware\arduino\avr\libraries\RCSwitch" -mmcu=atmega328p
+	avr-g++ -s -Os  -o"Light_Project.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lm -Wl,-Map,Light_Project.map,--cref -mrelax -Wl,--gc-sections -L"C:\Users\USER\Documents\Workspace\Aduino_Vehicle_Project\lib_src\HomeAutoLight" -L"C:\Users\USER\Documents\Workspace\Aduino_Vehicle_Project\lib_src\RCSwitch" -L"C:\Users\USER\Documents\Workspace\ArduinoCore\328P_16MHz" -mmcu=atmega328p
 	@echo 'Finished building target: $@'
 	@echo ' '
 

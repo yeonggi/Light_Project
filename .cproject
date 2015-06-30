@@ -31,9 +31,9 @@
 								<option id="de.innot.avreclipse.compiler.option.debug.level.1236424761" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level" value="de.innot.avreclipse.compiler.option.debug.level.g1" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.405319111" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" value="de.innot.avreclipse.compiler.optimize.two" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.compiler.option.incpath.1536834928" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aduino_Vehicle_Project/lib_src/HomeAutoLight}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aduino_Vehicle_Project/lib_src/RCSwitch}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Arduino\hardware\arduino\avr\libraries\RCSwitch&quot;"/>
 								</option>
 								<option id="de.innot.avreclipse.compiler.option.optimize.packstruct.1635157001" name="Pack structs (-fpack-struct)" superClass="de.innot.avreclipse.compiler.option.optimize.packstruct" value="false" valueType="boolean"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.shortenums.227011664" name="Short enums (-fshort-enums)" superClass="de.innot.avreclipse.compiler.option.optimize.shortenums" value="false" valueType="boolean"/>
@@ -46,8 +46,8 @@
 								<option id="de.innot.avreclipse.cppcompiler.option.debug.level.669327186" name="Generate Debugging Info" superClass="de.innot.avreclipse.cppcompiler.option.debug.level" value="de.innot.avreclipse.cppcompiler.option.debug.level.g1" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.987537878" name="Optimization Level" superClass="de.innot.avreclipse.cppcompiler.option.optimize" value="de.innot.avreclipse.cppcompiler.optimize.two" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.incpath.1193678993" name="Include Paths (-I)" superClass="de.innot.avreclipse.cppcompiler.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HomeAutoLight}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Arduino\hardware\arduino\avr\libraries\RCSwitch&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aduino_Vehicle_Project/lib_src/HomeAutoLight}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aduino_Vehicle_Project/lib_src/RCSwitch}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/src}&quot;"/>
 								</option>
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.packstruct.1346841177" name="Pack structs (-fpack-struct)" superClass="de.innot.avreclipse.cppcompiler.option.optimize.packstruct" value="false" valueType="boolean"/>
@@ -60,9 +60,9 @@
 							<tool id="de.innot.avreclipse.tool.linker.winavr.app.debug.1678728339" name="AVR C Linker" superClass="de.innot.avreclipse.tool.linker.winavr.app.debug"/>
 							<tool command="avr-g++" commandLinePattern="${COMMAND} -s -Os  ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT} ${INPUTS} -lm ${FLAGS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="de.innot.avreclipse.tool.cpplinker.app.debug.1945581344" name="AVR C++ Linker" superClass="de.innot.avreclipse.tool.cpplinker.app.debug">
 								<option id="de.innot.avreclipse.cpplinker.option.libpath.890914985" name="Libraries Path (-L)" superClass="de.innot.avreclipse.cpplinker.option.libpath" valueType="stringList">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HomeAutoLight}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aduino_Vehicle_Project/lib_src/HomeAutoLight}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aduino_Vehicle_Project/lib_src/RCSwitch}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/328P_16MHz}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Arduino\hardware\arduino\avr\libraries\RCSwitch&quot;"/>
 								</option>
 								<option id="de.innot.avreclipse.cpplinker.option.libs.1488859631" name="Libraries (-l)" superClass="de.innot.avreclipse.cpplinker.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="ArduinoCore"/>

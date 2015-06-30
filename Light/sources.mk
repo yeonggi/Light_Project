@@ -30,6 +30,9 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-HomeAutoLight \
+lib_src/Time \
+lib_src/SoftwareSerial \
+lib_src/RCSwitch \
+lib_src/HomeAutoLight \
 Debug \
 

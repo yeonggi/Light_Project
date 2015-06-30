@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <HomeAutoLight.h>
 #include <avr/sleep.h>
-#include <Time.h>
+
 
 CCDSensor Sensor(Sensing_pin, Interrupt_pin);
 
@@ -20,12 +20,12 @@ CCDSensor Sensor(Sensing_pin, Interrupt_pin);
  * A1, D0 ---- CCD beteen Register
  *
  *
- *
+ *sdfsfsdf
  *
  *
  */
 //가변저항 으로 할 걸
-
+/////
 /**mode **/
 #define Print_only_CCDSensor_Value 		0
 #define Print_Data 						0
@@ -37,7 +37,6 @@ void setup() {
 
 ///
 void loop() {
-
 
 #if Print_only_CCDSensor_Value
 	while(1)
@@ -51,10 +50,10 @@ void loop() {
 	Sensor.print_Value();
 #endif
 
-
+	// power
 	Sensor.AutoLight_Power_Saving_Main();
 
-	//Serial.println("Normal Mode ");
+
 
 }
 
